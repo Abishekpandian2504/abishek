@@ -11,7 +11,7 @@ module.exports = function(req, res, next) {
     const decoded = jwt.verify(token, config.get("jwtPrivateKey"));
     //req.user = decoded; // only _id of the user in the payload
     //req.farmer = decoded;
-    req.farmeruse = decoded;
+    req.farmeruser = decoded;
     next(); // route handler
   } catch (ex) {
     res.status(400).send("Invalid token.");
