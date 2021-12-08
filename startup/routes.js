@@ -7,7 +7,7 @@ const error = require('../middleware/error');
 
 module.exports = function(app) {
 app.use(express.json());
-//app.use('/api/farmers', farmers);
+app.use('/api/farmers', farmers);
 app.use('/api/farmerusers', farmerusers);
 
 // app.use(function(err, req, res, next) {
